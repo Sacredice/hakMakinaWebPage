@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-mask {
+  background: linear-gradient(to right, black, transparent);
+}
