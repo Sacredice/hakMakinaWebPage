@@ -1,17 +1,23 @@
+import Footer from './components/Footer'
 import Home from './components/Home'
+import NavigationBar from './components/NavigationBar'
 
 
 
 function App() {
 
 
-
-
   return (
-    <div className='relative h-screen'>
-      <Home />
+    <>
+      <header>
+        <NavigationBar />
+      </header>
+      <main>
+        <Home />
+      </main>
+      <Footer />
 
-    </div>
+    </>
 
 
   )

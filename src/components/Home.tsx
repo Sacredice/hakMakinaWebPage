@@ -15,7 +15,7 @@ function Home() {
 
 
   return (
-    <div className='relative h-screen'>
+    <div className='relative h-[calc(100vh-48px-36px)]'>
 
 
       <div className={`absolute bg-luffy-sunset flex place-content-center bg-center h-full w-full bg-cover transition-opacity duration-700 ${bgImg === "bg-luffy-sunset" ? "opacity-100" : "opacity-0"}`}>
@@ -32,30 +32,30 @@ function Home() {
       </div>
 
       <div className='w-full h-full flex justify-end items-center'>
-        <div className='absolute flex-row justify-center left-[10%]'>
+        <div className='absolute flex-row justify-center left-[9%]'>
 
-          <div className='bg-zoro bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-300 ease-in-out hover:scale-125' onMouseEnter={() => {
+          <div className='bg-zoro bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
             setBarHeights(barsArray[1]);
             setBgImg("bg-zoro")
           }} onMouseLeave={() => {
             setBarHeights(barsArray[0]);
             setBgImg("bg-luffy-sunset")
           }}></div>
-          <div className='bg-luffy bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-300 ease-in-out hover:scale-125' onMouseEnter={() => {
+          <div className='bg-luffy bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
             setBarHeights(barsArray[2])
             setBgImg("bg-luffy")
           }} onMouseLeave={() => {
             setBarHeights(barsArray[0])
             setBgImg("bg-luffy-sunset")
           }}></div>
-          <div className='bg-sanji bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-300 ease-in-out hover:scale-125' onMouseEnter={() => {
+          <div className='bg-sanji bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
             setBarHeights(barsArray[3])
             setBgImg("bg-sanji")
           }} onMouseLeave={() => {
             setBarHeights(barsArray[0])
             setBgImg("bg-luffy-sunset")
           }}></div>
-          <div className='bg-blue-500 w-36 h-36 rounded-full mb-7 transition-all duration-300 ease-in-out hover:scale-125' onMouseEnter={() => {
+          <div className='bg-blue-500 w-36 h-36 rounded-full mb-7 transition-all duration-300 ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
             setBarHeights(barsArray[2])
             setBgImg("bg-luffy")
           }} onMouseLeave={() => {
