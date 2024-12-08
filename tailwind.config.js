@@ -7,6 +7,7 @@ export default {
         "luffy-sunset": "url('/luffy-sunset.jpg')",
         "luffy": "url('/luffy.jpg')",
         "zoro": "url('/zoro.jpg')",
+        "sanji": "url('/sanji.jpg')",
         "gradient-black-to-transparent": "linear-gradient(to right, black, transparent)",
       },
       boxShadow: {
