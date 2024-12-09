@@ -12,6 +12,9 @@ export default {
       },
       boxShadow: {
         "barShadow": " 1px 2px 6px 3px black"
+      },
+      screens: {
+        'no-hover': { raw: '(hover:none)' }
       }
     },
   },
