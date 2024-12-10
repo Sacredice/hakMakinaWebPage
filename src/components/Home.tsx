@@ -7,6 +7,7 @@ const barsArray = [
   ["h-[20%]", "h-[40%]", "h-[75%]", "h-[75%]", "h-[40%]", "h-[20%]"],
   ["h-[75%]", "h-[40%]", "h-[20%]", "h-[20%]", "h-[40%]", "h-[75%]"],
   ["h-[60%]", "h-[30%]", "h-[40%]", "h-[50%]", "h-[40%]", "h-[65%]"],
+  ["h-[20%]", "h-[30%]", "h-[40%]", "h-[50%]", "h-[60%]", "h-[70%]"],
 ]
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
       setBgImg(1)
       intervalRef.current = setInterval(() => {
         setBgImg(prev => (prev < 4 ? prev + 1 : 1))
-      }, 4000)
+      }, 3500)
     }
   }
 
@@ -74,8 +75,9 @@ function Home() {
       <div className='absolute h-full w-full bg-gradient-to-r from-black to-transparent'>
       </div>
 
-      <div className='w-full h-full flex justify-between items-center'>
-        <div className='hidden h-full lg:flex no-hover:hidden flex-col justify-center ml-[6.6%] py-7 z-10 overflow-y-clip'>
+
+      <div className='w-full hidden lg:flex no-hover:hidden h-full items-center'>
+        <div className='h-full flex flex-grow flex-col justify-center py-7 z-10 ml-[6.5%]'>
 
           <div className='bg-zoro bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
             setBarHeights(barsArray[1]);
@@ -84,8 +86,8 @@ function Home() {
             setBarHeights(barsArray[0]);
             setBgImg(0)
           }}>
-            <div className='h-full w-[210px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] border-r border-t border-b border-slate-400 rounded-r-full'>
-
+            <div className='pl-20 h-full flex items-center w-[215px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] text-slate-200 text-sm xl:text-base transition-all duration-[400ms] ease-in-out' style={{ opacity: bgImg === 1 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
           <div className='bg-luffy bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
@@ -95,8 +97,8 @@ function Home() {
             setBarHeights(barsArray[0])
             setBgImg(0)
           }}>
-            <div className='h-full w-[210px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] border-r border-t border-b border-slate-400 rounded-r-full'>
-
+            <div className='pl-20 pr-1 h-full flex items-center w-[215px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] border-r border-t border-b border-slate-400 rounded-r-full text-slate-200 text-sm xl:text-base transition-all duration-[400ms] ease-in-out' style={{ opacity: bgImg === 2 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
           <div className='bg-sanji bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
@@ -106,8 +108,8 @@ function Home() {
             setBarHeights(barsArray[0])
             setBgImg(0)
           }}>
-            <div className='h-full w-[210px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] border-r border-t border-b border-blue-900 '>
-
+            <div className='pl-20 pr-1 h-full flex items-center w-[215px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] border-r border-t border-b border-slate-400 text-slate-200 text-sm xl:text-base transition-all duration-[400ms] ease-in-out' style={{ opacity: bgImg === 3 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
           <div className='bg-blue-500 w-36 h-36 rounded-full transition-all duration-[400ms] ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
@@ -117,39 +119,42 @@ function Home() {
             setBarHeights(barsArray[0])
             setBgImg(0)
           }}>
-            <div className='h-full w-[210px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] border-r border-t border-b border-slate-400 '>
-
+            <div className='pl-20 pr-1 h-full flex items-center w-[215px] xl:w-[278px] 2xl:w-[334px] translate-x-[72px] text-slate-200 text-sm xl:text-base transition-all duration-[400ms] ease-in-out' style={{ opacity: bgImg === 1 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
+
+
         </div>
-
-        {/* sm < Tablet buttons < lg */}
-        <div className='hidden h-full py-6 sm:flex flex-col lg:hidden justify-center ml-[6.6%] no-hover:flex z-10'>
-
-          <div className='bg-zoro bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-[400] ease-in-out cursor-pointer' style={{ transform: bgImg === 1 ? "scale(125%)" : "scale(100%)" }}>
-            <div className='h-full w-[410px] md:w-[500px] translate-x-[72px] border-r border-t border-b border-slate-400 rounded-r-full'>
-
-            </div>
-          </div>
-          <div className='bg-luffy bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out cursor-pointer' style={{ transform: bgImg === 2 ? "scale(125%)" : "scale(100%)" }}>
-            <div className='h-full w-[410px] md:w-[500px] translate-x-[72px] border-r border-t border-b border-slate-400 rounded-r-full'>
-
-            </div>
-          </div>
-          <div className='bg-sanji bg-cover bg-center w-36 h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out cursor-pointer' style={{ transform: bgImg === 3 ? "scale(125%)" : "scale(100%)" }}>
-            <div className='h-full w-[410px] md:w-[500px] translate-x-[72px] border-r border-t border-b border-blue-900 '>
-
-            </div>
-          </div>
-          <div className='bg-blue-500 w-36 h-36 rounded-full transition-all duration-[400ms] ease-in-out cursor-pointer'>
-            <div className='h-full w-[410px] md:w-[500px] translate-x-[72px] border-r border-t border-b border-slate-400 '>
-
-            </div>
-          </div>
-        </div>
-
-
         <Bars barHeights={barHeights} />
+      </div>
+
+      <div className='w-full h-full hidden sm:flex lg:hidden no-hover:flex justify-start items-center'>
+        {/* Tablet Mobile Phone styling < 1024px */}
+        <div className='h-full py-6 flex flex-col justify-center ml-[6.6%] text-slate-200 text-xs sm:text-base z-10'>
+
+          <div className='bg-zoro bg-cover bg-center w-20 h-20 sm:w-36 sm:h-36 rounded-full mb-8 transition-all duration-[400] ease-in-out cursor-pointer' style={{ transform: bgImg === 1 ? "scale(125%)" : "scale(100%)" }}>
+            <div className='pl-12 sm:pl-20 h-full w-[250px] flex items-center sm:w-[410px] md:w-[500px] translate-x-[40px] sm:translate-x-[72px] sm:border-r sm:border-t sm:border-b sm:border-slate-400 rounded-r-full' style={{ opacity: bgImg === 1 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div className='bg-luffy bg-cover bg-center w-20 h-20 sm:w-36 sm:h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out cursor-pointer' style={{ transform: bgImg === 2 ? "scale(125%)" : "scale(100%)" }}>
+            <div className='pl-12 sm:pl-20 h-full w-[250px] flex items-center sm:w-[410px] md:w-[500px] translate-x-[40px] sm:translate-x-[72px] sm:border-r sm:border-t sm:border-b sm:border-slate-400 rounded-r-full' style={{ opacity: bgImg === 2 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div className='bg-sanji bg-cover bg-center w-20 h-20 sm:w-36 sm:h-36 rounded-full mb-8 transition-all duration-[400ms] ease-in-out cursor-pointer' style={{ transform: bgImg === 3 ? "scale(125%)" : "scale(100%)" }}>
+            <div className='pl-12 sm:pl-20 h-full w-[250px] flex items-center sm:w-[410px] md:w-[500px] translate-x-[40px] sm:translate-x-[72px] sm:border-r sm:border-t sm:border-b border-blue-900' style={{ opacity: bgImg === 3 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div className='bg-blue-500 w-20 h-20 sm:w-36 sm:h-36 rounded-full transition-all duration-[400ms] ease-in-out cursor-pointer' style={{ transform: bgImg === 4 ? "scale(125%)" : "scale(100%)" }}>
+            <div className='pl-12 sm:pl-20 h-full w-[250px] flex items-center sm:w-[410px] md:w-[500px] translate-x-[40px] sm:translate-x-[72px] sm:border-r sm:border-t sm:border-b border-slate-400' style={{ opacity: bgImg === 3 ? "1" : "0.6" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
