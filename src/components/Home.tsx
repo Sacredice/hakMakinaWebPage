@@ -57,7 +57,7 @@ function Home() {
 
 
   return (
-    <div className='relative h-[calc(100vh-48px-36px)]'>
+    <div className='relative h-[calc(100vh-48px-36px)] overflow-hidden'>
 
 
       <div className={`absolute bg-luffy-sunset flex place-content-center bg-center h-full w-full bg-cover transition-opacity duration-700 ${bgImg === 0 ? "opacity-100" : "opacity-0"}`}>
@@ -129,7 +129,7 @@ function Home() {
         <Bars barHeights={barHeights} />
       </div>
 
-      <div className='w-full h-full hidden sm:flex lg:hidden no-hover:flex justify-start items-center'>
+      <div className='w-full h-full flex sm:flex lg:hidden no-hover:flex justify-start items-center'>
         {/* Tablet Mobile Phone styling < 1024px */}
         <div className='h-full py-6 flex flex-col justify-center ml-[6.6%] text-slate-200 text-xs sm:text-base z-10'>
 
