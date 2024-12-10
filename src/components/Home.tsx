@@ -113,7 +113,7 @@ function Home() {
             </div>
           </div>
           <div className='bg-blue-500 w-36 h-36 rounded-full transition-all duration-[400ms] ease-in-out hover:scale-125 cursor-pointer' onMouseEnter={() => {
-            setBarHeights(barsArray[2])
+            setBarHeights(barsArray[4])
             setBgImg(1)
           }} onMouseLeave={() => {
             setBarHeights(barsArray[0])
