@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 function Footer() {
@@ -8,7 +9,7 @@ function Footer() {
           Azgın Motorcular Org. &copy; {new Date().getFullYear()}
         </div>
         <div>
-          Contact
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </footer>
