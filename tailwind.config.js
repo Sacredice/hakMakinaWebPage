@@ -9,6 +9,8 @@ export default {
         "zoro": "url('/zoro.jpg')",
         "sanji": "url('/sanji.jpg')",
         "gradient-black-to-transparent": "linear-gradient(to right, black, transparent)",
+        "success": "url('/success.png')",
+        "error": "url('/error.png')"
       },
       boxShadow: {
         "barShadow": " 1px 2px 6px 3px black"

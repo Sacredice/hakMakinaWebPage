@@ -13,7 +13,7 @@ const barsArray = [
 function Home() {
   const [bgImg, setBgImg] = useState(0)
   const [barHeights, setBarHeights] = useState(barsArray[0])
-  const intervalRef = useRef<number | null>()
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>()
   // const touchScreenRef = useRef()
 
   // const isTouchScreen = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0))
