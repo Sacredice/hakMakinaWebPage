@@ -58,7 +58,7 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='relative h-[calc(100vh-48px-36px)] overflow-hidden bg-blue-950 place-content-center '>
-      <div className="border-b border-white/10 pb-12 max-w-[800px] mx-auto px-4">
+      <div className="border-b border-white/10 pb-6 max-w-[800px] mx-auto px-4">
         <h2 className="text-base/7 font-semibold text-white">Personal Information</h2>
         <p className="mt-1 text-sm/6 text-gray-400">Use a permanent address where you can receive mail.</p>
 
@@ -159,7 +159,7 @@ function ContactForm() {
           </div>
         </div>
       </div>
-      <div className="mt-6 flex items-center justify-end gap-x-6 max-w-[800px] px-4 mx-auto">
+      <div className="mt-5 flex items-center justify-end gap-x-6 max-w-[800px] px-4 mx-auto">
         <button onClick={() => setIsLoading(!isLoading)} type="button" className="text-sm/6 font-semibold text-white">
           İptal
         </button>
